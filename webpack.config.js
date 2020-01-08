@@ -68,6 +68,13 @@ module.exports = {
       inject: true
     }),
 
+    
+    new HtmlWebpackPlugin({
+      template: "./src/pages/introduction.html",
+      filename: "introduction.html",
+      inject: true
+    }),
+
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // all options are optional

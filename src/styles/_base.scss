@@ -1,0 +1,61 @@
+@import "_variables.scss";
+
+html {
+  box-sizing: border-box;
+  font-size: $root-size;
+  font-family: $font;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+  
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2.2fr 2.2fr 0.8fr;
+  grid-template-areas: 
+    "heading heading heading"
+    "menu content content"
+    "menu content content"
+    "footer footer footer";
+  justify-items: center;
+  align-items: center;
+}
+
+a{
+  text-decoration: none;
+  color:black;
+}
+
+
+.main-header{
+  grid-area: heading;
+}
+
+.menu{
+  grid-area: menu;
+
+  &__list{
+    list-style:none;
+  }
+
+  &__item{
+    font-size: 1.2rem;
+  }
+
+  &__heading{
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+}
+
+.content{
+  grid-area: content;
+  justify-self: start;
+}
+
+
+.footer{
+  grid-area: footer;
+}
