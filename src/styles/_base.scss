@@ -4,6 +4,7 @@ html {
   box-sizing: border-box;
   font-size: $root-size;
   font-family: $font-styleguide;
+  scroll-behavior: smooth;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -28,6 +29,10 @@ a{
   color:black;
 }
 
+hr {
+    color: $darkgreen;
+    margin: 5% 0;
+}
 
 .main-header{
   grid-area: heading;
@@ -56,6 +61,10 @@ a{
 .content{
   grid-area: content;
   justify-self: start;
+}
+
+.chapter {
+  width: 90%;
 }
 
 
