@@ -14,26 +14,23 @@
          <li class="chapter__friend__item">
             <img class="chapter__friend__item__picture" src=<%= require('./../images/icon1.jpeg') %> alt="Logo">
             <div class="chapter__friend__item__text">
-               <p>Chrisik1</p>
-               <p><span class="chapter__friend__item__text--key">CO<sub>2</sub>:</span> 60kg</p>
-               <p><span class="chapter__friend__item__text--key">Green Points:</span> 150</p>
+               <p><b>Chrisik1</b></p>
+               <p><b>CO<sub>2</sub>:</b> 60kg</p>
+               <p><b>Green Points:</b> 150</p>
             </div>
          </li>
       </ul>
 
       <h2 class="chapter__main-heading">HTML</h2>
 
-<pre rel="HTML"><code>
-&lt;ul class=&quot;chapter__friend&quot;&gt;
+<pre rel="HTML"><code>&lt;ul class=&quot;chapter__friend&quot;&gt;
    &lt;li class=&quot;chapter__friend__item&quot;&gt;
       &lt;img class=&quot;chapter__friend__item__picture&quot; 
       src=&lt;%= require('./../images/icon1.jpeg') %&gt; alt=&quot;Logo&quot;&gt;
       &lt;div class=&quot;chapter__friend__item__text&quot;&gt;
-         &lt;p&gt;Chrisik1&lt;/p&gt;
-         &lt;p&gt;&lt;span class=&quot;chapter__friend__item__text--key&quot;&gt;
-         CO&lt;sub&gt;2&lt;/sub&gt;:&lt;/span&gt; 60kg&lt;/p&gt;
-         &lt;p&gt;&lt;span class=&quot;chapter__friend__item__text--key&quot;&gt;
-         Green Points:&lt;/span&gt; 150&lt;/p&gt;
+         &lt;p&gt;&lt;b&gt;Chrisik1&lt;/b&gt;&lt;/p&gt;
+         &lt;p&gt;&lt;b&gt;CO&lt;sub&gt;2&lt;/sub&gt;:&lt;/b&gt; 60kg&lt;/p&gt;
+         &lt;p&gt;&lt;b&gt;Green Points:&lt;/b&gt; 150&lt;/p&gt;
       &lt;/div&gt;
    &lt;/li&gt;
 &lt;/ul&gt;
@@ -44,40 +41,45 @@
 <pre rel="HTML"><code>.chapter__friend {
    width: 300px;
    height: 80px;
+   font-family: $font-mmp;
+   font-size: 1.2rem;
    list-style-type: none;
    padding-left: 0;
    margin: 0;
    background-color: $lightgreen;
    
    &__item {
-         width: 100%;
-         height: 100%;
-         display: flex;
-         flex-direction: row;
-         justify-content: space-around;
-         align-items: center;
+       width: 100%;
+       height: 100%;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+       align-items: center;
+       box-shadow: 2px 1px 1px $darkgreen;
 
-         &__picture {
-            width: 75px;
-            height: 75px;
-            border-radius: 50%;
-         }
+       &__picture {
+           width: 75px;
+           height: 75px;
+           border-radius: 50%;
+       }
 
-         &__text {
-            p {
+       &__text {
+           p {
                margin: 0;
-            }
-            &--key {
-               font-weight: bold;
-            }
-         }
+           }
+       }
    }
 }</code></pre>
    </div>
 
    <div class="chapter" id="form">
 
-   <h2 class="chapter__main-heading">Form Elements</h2>
+   <h2 class="chapter__main-heading">Form Elemente</h2>
+
+   <p class="chapter__text">Es gibt 2 verschiedene Arten von Form Elementen. Input <b>Text Felder</b> werden zum Beispiel 
+      für die Eingabe von Start und Ziel des Weges eingesetzt. Mithilfe von <b>Radio Buttons</b>, customized mit Bildern, 
+      werden unter anderem für die Auswahl des gewünschten Verkehrsmittel verwendet.
+   </p>
 
    <form>
       <input class="chapter__form__text" type="text" name="start" placeholder="Start"><br>
