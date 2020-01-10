@@ -35,11 +35,10 @@ a{
 
 .menu{
   grid-area: menu;
+  align-self:start;
   position: sticky;
   top:0;
-  align-self:start;
-
-
+  
   &__list{
     list-style:none;
   }

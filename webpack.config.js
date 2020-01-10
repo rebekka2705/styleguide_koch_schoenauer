@@ -64,14 +64,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
-      inject: true
-    }),
-
-    
-    new HtmlWebpackPlugin({
       template: "./src/pages/index.html",
-      filename: "index.html",
       inject: true
     }),
 
@@ -93,7 +86,6 @@ module.exports = {
       inject: true
     }),
 
-    
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // all options are optional
