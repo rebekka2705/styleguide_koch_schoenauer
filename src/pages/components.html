@@ -9,9 +9,132 @@
    </div>
 
    <!--Fake Link: grün unterstrichen-->
+   <div class="chapter" id="links">
+      <h2 class="chapter__main-heading">Links</h2>
+      <div class="chapter__text">
+         Für unser Projekt ist ein Standardlink und ein Disabledlink ausreichend.
+      </div>   
+
+      <div class="chapter__links">
+         <div class="chapter__links__item"><a class="link" href="#">Standardlink</a></div>
+         <div class="chapter__links__item"><a class="link link--disabled" href="#">Disabledlink</a></div>
+      </div>
+      
+      <h2 class="chapter__main-heading">HTML</h2>
+
+      <pre rel="HTML">
+         <code>
+            &lt;a class=&quot;link&quot; href=&quot;#&quot;&gt;Standardlink&lt;/a&gt;
+            &lt;a class=&quot;link link--disabled&quot; href=&quot;#&quot;&gt;Disabledlink&lt;/a&gt;
+         </code>
+      </pre>
+
+
+      <h2 class="chapter__main-heading">SCSS</h2>
+
+      <pre rel="HTML">
+         <code>
+            .link {
+               font-family: $font-mmp;
+               font-size: 1.2rem;
+               font-weight: bold;
+               text-decoration: none;
+               color: black;
+               padding: 1rem;
+               margin:1rem;
+               
+               &:hover {
+                  background: $lightgreen;
+                  color: white;
+                  border-radius: 6px;
+               }
+               
+               &--disabled {
+                  color: grey;
+               
+                  &:hover{
+                     background: none;
+                     color: grey;
+                     cursor: default;
+                  }
+               }
+            }
+         </code>
+      </pre>
+
+
+   </div>
     <!--Button: beim Hoovern Text wird größer, medium und big Button-->
+
+    <div class="chapter" id="buttons">
+      <h2 class="chapter__main-heading">Buttons</h2>
+      <p class="chapter__text">Unser Primary-Button verwendet unsere Secondary Textcolor white</p>
+
+      <div class="chapter__buttons">
+         <button class="button">Standardbutton</button>
+         <button class="button button--small">Kleiner Button</button>
+      </div>
+    </div>
+
+    <h2 class="chapter__main-heading">HTML</h2>
+
+    <pre rel="HTML">
+       <code>
+         &lt;button class=&quot;button&quot;&gt;Standardbutton&lt;/button&gt;
+         &lt;button class=&quot;button button--small&quot;&gt;Kleiner Button&lt;/button&gt;
+       </code>
+    </pre>
+
+
+    <h2 class="chapter__main-heading">SCSS</h2>
+
+    <pre rel="HTML">
+      <code>
+         .button {
+            background: $darkgreen;
+            border: none;
+            border-radius: 10px;
+            font-family: $font-mmp;
+            font-weight: bold;
+            font-size: $button;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            margin: auto;
+            text-decoration: none;
+            color: white;
+          
+            &:hover {
+              transform: scale(1.1);
+              transition-duration: 0.2s;
+            }
+          
+            &--small {
+              font-size: $button-small;
+            }
+          }
+ 
+      </code>
+   </pre>
+
+
     <!--Form Elements: Input Felder, Radio Buttons-->
      <!--Navigation: beim Hoovern grün hinterlegt-->
+
+     <div class="chapter" id="navigation">
+
+      <h2 class="chapter__main-heading">Navigation</h2>
+      <p class="chapter__text">Hier wird unsere Navigation veranschaulicht.</p>
+         <div class="chapter__navigation">
+            <ul class="navigation">
+               <li class="navigation__items navigation__items--active">Route</li>
+               <li class="navigation__items">Statistik</li>
+               <li class="navigation__items">Freunde</li>
+               <li class="navigation__items">Profil</li>
+            </ul>
+         </div>
+     </div>
      <!--Feedback Pop-up-->
   
 </section>
