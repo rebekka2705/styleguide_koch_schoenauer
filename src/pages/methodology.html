@@ -3,7 +3,41 @@
 <section class="content">
 
     <!--Lintin: Duble Quotes, semicolons, 2 spaces, use rem for fonts, sass, BEM-Syntax + Bsp -->
+    <div class="chapter" id="rules">
+        <h2 class="chapter__main-heading">Code Style Rules</h2>
+        <ul class="chapter__list">
+            <li class="chapter__list__item">Double Quotes</li>
+            <li class="chapter__list__item">Einrückung: 2 spaces</li>
+            <li class="chapter__list__item">Verwedung von rem für Fonts mit Basis 16px</li>
+            <li class="chapter__list__item">SASS als Preprocessor</li>
+            <li class="chapter__list__item">BEM-Synthax</li>
+        </ul>
+
+    </div>
     <!--BEM: Code Snippet Bsp-->
+    <div class="chapter" id="conventions">
+        <h2 class="chapter__main-heading">Naming Conventions</h2>
+        <p class="chapter__text">Wir verwenden den BEM-Synthax. Das Block-Component ist in diesem Beispiel "menu". 
+            Das Element, welches von diesem Block abhängig ist, ist die Liste also "menu__list", die einzelnen Menü-Unterpunkte
+            bekommen die Klasse "menu__item", ebenso gibt es weiteres Element "menu__item__link". Der
+            Link besitzt noch den Modifier "menu__item__link--big" bzw. "menu__item__link--small". Diese Methode erleichtert
+            eine konsistente Struktur im CSS zu erhalten und es ist leichter Strukturen wiederzuverwenden.
+        </p>
+        <figure>
+            <pre rel="HTML"class="code-snippet">
+                <code>
+&lt;nav class=&quot;menu&quot;&gt;
+    &lt;ul class=&quot;menu__list&quot;&gt;
+        &lt;li class=&quot;menu__heading&quot;&gt;&lt;a class=&quot;menu__item__link--big&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;menu__item&quot;&gt;&lt;a class=&quot;menu__item__link--small&quot;&gt;Subpage1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;menu__item&quot;&gt;&lt;a class=&quot;menu__item__link--small&quot;&gt;Subpage2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;menu__item&quot;&gt;&lt;a class=&quot;menu__item__link--small&quot;&gt;Subpage3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+                </code>
+            </pre>
+        </figure>
+    </div>
 
   
 </section>
