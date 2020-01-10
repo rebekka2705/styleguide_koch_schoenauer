@@ -1,0 +1,29 @@
+.chapter__buttons{
+  display: flex;
+  justify-content: space-around;
+}
+
+.button {
+  background: $darkgreen;
+  border: none;
+  border-radius: 10px;
+  font-family: $font-mmp;
+  font-weight: bold;
+  font-size: $button;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: auto;
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    transform: scale(1.1);
+    transition-duration: 0.2s;
+  }
+
+  &--small {
+    font-size: $button-small;
+  }
+}
