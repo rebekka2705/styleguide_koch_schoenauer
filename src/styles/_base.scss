@@ -13,7 +13,7 @@ body{
   
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 2.2fr 2.2fr 0.8fr;
+  grid-template-rows: auto;
   grid-template-areas: 
     "heading heading heading"
     "menu content content"
@@ -35,6 +35,10 @@ a{
 
 .menu{
   grid-area: menu;
+  position: sticky;
+  top:0;
+  align-self:start;
+
 
   &__list{
     list-style:none;

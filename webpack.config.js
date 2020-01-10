@@ -70,11 +70,30 @@ module.exports = {
 
     
     new HtmlWebpackPlugin({
-      template: "./src/pages/introduction.html",
-      filename: "introduction.html",
+      template: "./src/pages/index.html",
+      filename: "index.html",
       inject: true
     }),
 
+    new HtmlWebpackPlugin({
+      template: "./src/pages/methodology.html",
+      filename: "methodology.html",
+      inject: true
+    }),
+
+    new HtmlWebpackPlugin({
+      template: "./src/pages/components.html",
+      filename: "components.html",
+      inject: true
+    }),
+
+    new HtmlWebpackPlugin({
+      template: "./src/pages/layout.html",
+      filename: "layout.html",
+      inject: true
+    }),
+
+    
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // all options are optional
