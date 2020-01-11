@@ -36,55 +36,16 @@ hr {
   text-align: center;
   grid-area: heading;
   background-color: $color-style;
+  color: $darkgreen;
   width: 100%;
   height: 30vh;
   margin-bottom: 5rem;
-  border-bottom: 15px solid #04385e;
- 
+  border-bottom: 15px solid $darkgreen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-<<<<<<< HEAD
-=======
-.menu{
-  grid-area: menu;
-  justify-self: end;
-  align-self:start;
-  padding: 0;
- 
-  margin-bottom: 5rem;
-  
-  &--sticky {
-     position: sticky;
-     top:0;
-  }
-  
-  &__list{
-    list-style:none;
-  }
-
-  &__item{
-    font-size: 1.1rem;
-    padding: 0.3rem;
-
-    &:hover {
-      font-weight: bolder;
-    }
-  }
-
-  &__heading{
-      font-size: 1.4rem;
-      font-weight: bold;
-      margin-top: 1rem;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
-
-}
-
->>>>>>> 68ed7ab90f7ad30de0b8481b9286ec83b7356f9a
 .content{
   grid-area: content;
   justify-self: start;
