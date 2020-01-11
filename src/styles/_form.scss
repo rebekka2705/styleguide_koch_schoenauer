@@ -1,40 +1,54 @@
-.chapter__form { 
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-    
+.chapter__form {
 
-    &__image {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        border-color: black;
-        border-width: 1px;
-        border-style: solid;
-        margin-right: 5px;
+    width: 80%;
+    margin-left: 10%;
+
+    .chapter__form__text {
+        font-family: $font-mmp;
+        font-size: 1.44rem;
+        color: black;
+        font-weight: bold;
+        border: 2px solid $lightgreen;
+        width: 100%;
+        height: 40px;
+        padding-left: 2%;
+        margin-bottom: 10px;
+        box-shadow: 2px 1px 1px $darkgreen;
+        border-radius: 10px;
     }
 
-    &__image:hover {
+    .chapter__form__text:focus {
+        color: white;
+        font-weight: bold;
         background-color: $lightgreen;
     }
-}
 
-.chapter__form__text {
-    font-family: $font-mmp;
-    font-size: 1.44rem;
-    color: black;
-    font-weight: bold;
-    border: 2px solid $lightgreen;
-    width: 300px;
-    height: 50px;
-    padding-left: 2%;
-    margin-bottom: 10px;
+    .chapter__form__radio { 
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+        
+        &__image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border-color: black;
+            border-width: 2.5px;
+            border-style: solid;
+            margin-right: 5px;
+        }
 
-}
+        &__image:hover {
+            background-color: $lightgreen;
+        }
+    }
+      
+    .chapter__form__radio + .chapter__form__radio__image {
+        cursor: pointer;
+    }
 
-.chapter__form__text:focus {
-    color: white;
-    font-weight: bold;
-    background-color: $lightgreen;
+    .chapter__form__radio:checked + .chapter__form__radio__image {
+        background-color: $lightgreen;
+    }
 }
