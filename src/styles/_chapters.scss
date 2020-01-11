@@ -11,10 +11,17 @@
   }
 
   &__text {
-    font-size: $paragraph;
+    font-size: $paragraph-style;
     margin-top: 2rem;
     margin-bottom: 3rem;
+    line-height: 2rem;
   }
 
 }
 
+.chapter__buttons {
+  display:flex;
+  justify-content: center;
+  align-content: center;
+  width: 105%;
+}

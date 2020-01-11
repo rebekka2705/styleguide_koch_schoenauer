@@ -3,11 +3,11 @@
 <section class="content">
 
    <div class="chapter" id="lists">
-      <h2 class="chapter__main-heading">Listen Elemente</h2>
+      <h2 class="chapter__main-heading">Listenelemente</h2>
 
       <p class="chapter__text">Die Rangliste unter den Freunden wird als Liste angezeigt. Jedes Listenelement enthält ein
          Bild des Freundes, sowie dessen Benutzername, seinen CO<sub>2</sub> Verbrauch seit Benützung der App und seine 
-         gesammelten Green Points. Diese Listen Elemente verfügen über keine Interaktion. 
+         gesammelten Green-Points. Diese Listenelemente verfügen über keine Interaktion. 
       </p>
       <div class="mobile-size">
          <ul class="chapter__friend">
@@ -37,62 +37,66 @@
 
       <h2 class="chapter__main-heading">HTML</h2>
 
-      <pre rel="HTML">
+
+     
+         <pre rel="HTML" class="code-snippet">
+            <code>
+   &lt;ul class=&quot;chapter__friend&quot;&gt;
+      &lt;li class=&quot;chapter__friend__item&quot;&gt;
+         &lt;img class=&quot;chapter__friend__item__picture&quot; 
+         src=&lt;%= require('./../images/icon1.jpeg') %&gt; alt=&quot;Logo&quot;&gt;
+         &lt;div class=&quot;chapter__friend__item__text&quot;&gt;
+            &lt;p&gt;&lt;b&gt;Chrisik1&lt;/b&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;b&gt;CO&lt;sub&gt;2&lt;/sub&gt;:&lt;/b&gt; 60kg&lt;/p&gt;
+            &lt;p&gt;&lt;b&gt;Green Points:&lt;/b&gt; 150&lt;/p&gt;
+         &lt;/div&gt;
+         &lt;/li&gt;
+   &lt;/ul&gt;
+            </code>
+         </pre>
+     
+
+   <h2 class="chapter__main-heading">CSS</h2>
+
+   
+      <pre rel="HTML" class="code-snippet">
          <code>
-            &lt;ul class=&quot;chapter__friend&quot;&gt;
-               &lt;li class=&quot;chapter__friend__item&quot;&gt;
-                  &lt;img class=&quot;chapter__friend__item__picture&quot; 
-                  src=&lt;%= require('./../images/icon1.jpeg') %&gt; alt=&quot;Logo&quot;&gt;
-                  &lt;div class=&quot;chapter__friend__item__text&quot;&gt;
-                     &lt;p&gt;&lt;b&gt;Chrisik1&lt;/b&gt;&lt;/p&gt;
-                     &lt;p&gt;&lt;b&gt;CO&lt;sub&gt;2&lt;/sub&gt;:&lt;/b&gt; 60kg&lt;/p&gt;
-                     &lt;p&gt;&lt;b&gt;Green Points:&lt;/b&gt; 150&lt;/p&gt;
-                  &lt;/div&gt;
-                &lt;/li&gt;
-            &lt;/ul&gt;
-         </code>
-      </pre>
-
-<h2 class="chapter__main-heading">CSS</h2>
-
-      <pre rel="HTML">
-         <code>
-            .chapter__friend {
-               width: 80%;
-               height: 10%;
-               margin-left: 10%;
-               padding: 2%;
-               font-family: $font-mmp;
-               font-size: 1.2rem;
-               list-style-type: none;
-               padding-left: 0;
-               background-color: $lightgreen;
-               box-shadow: 2px 1px 1px $darkgreen;
-               border-radius: 10px;
-         
-               &__item {
-                  width: 100%;
-                  height: 100%;
-                  display: flex;
-                  flex-direction: row;
-                  justify-content: space-around;
-                  align-items: center;
+      .chapter__friend {
+         width: 80%;
+         height: 10%;
+         margin-left: 10%;
+         padding: 2%;
+         font-family: $font-mmp;
+         font-size: 1.2rem;
+         list-style-type: none;
+         padding-left: 0;
+         background-color: $lightgreen;
+         box-shadow: 2px 1px 1px $darkgreen;
+         border-radius: 10px;
+   
+         &__item {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
 
 
-                  &__picture {
-                     width: 65px;
-                     height: 65px;
-                     border-radius: 50%;
-                     box-shadow: 1px 0.5px 0.5px $darkgreen;
-                  }
+            &__picture {
+               width: 65px;
+               height: 65px;
+               border-radius: 50%;
+               box-shadow: 1px 0.5px 0.5px $darkgreen;
+            }
 
-                  &__text {
-                     p {
-                           margin: 0;
-                     }
-                  }
+            &__text {
+               p {
+                     margin: 0;
                }
             }
+         }
+      }
       </code>
    </pre>
    <hr>
@@ -100,9 +104,9 @@
 
    <div class="chapter" id="form">
 
-   <h2 class="chapter__main-heading">Form Elemente</h2>
+   <h2 class="chapter__main-heading">Form-Elemente</h2>
 
-   <p class="chapter__text">Es gibt 2 verschiedene Arten von Form Elementen. <b>Input Text Felder</b> werden zum Beispiel 
+   <p class="chapter__text">Es gibt 2 verschiedene Arten von Form-Elementen. <b>Input-Textfelder</b> werden zum Beispiel 
       für die Eingabe von Start und Ziel des Weges eingesetzt. Mithilfe von <b>Radio Buttons</b>, welche durch Bilder ersetzt werden,
       kann das gewünschte Verkehrsmittel ausgewählt werden. Das Auto wird standardgemäß ausgewählt.
    </p>
@@ -125,88 +129,88 @@
     </form> 
    </div>
    <h2 class="chapter__main-heading">HTML</h2>
-      <pre rel="HTML">
+      <pre rel="HTML" class="code-snippet">
          <code>
-            &lt;form class=&quot;chapter__form&quot;&gt;
-               &lt;input class=&quot;chapter__form__text&quot; type=&quot;text&quot;
-                name=&quot;start&quot; placeholder=&quot;Start&quot;&gt;&lt;br&gt;
-               &lt;input class=&quot;chapter__form__text&quot; type=&quot;text&quot;
-                name=&quot;end&quot; placeholder=&quot;Ziel&quot;&gt;&lt;br&gt;
+      &lt;form class=&quot;chapter__form&quot;&gt;
+         &lt;input class=&quot;chapter__form__text&quot; type=&quot;text&quot;
+            name=&quot;start&quot; placeholder=&quot;Start&quot;&gt;&lt;br&gt;
+         &lt;input class=&quot;chapter__form__text&quot; type=&quot;text&quot;
+            name=&quot;end&quot; placeholder=&quot;Ziel&quot;&gt;&lt;br&gt;
 
-            &lt;label &gt;
-               &lt;input class=&quot;chapter__form__radio&quot; type=&quot;radio&quot;
-                name=&quot;transport-icon&quot; value=&quot;small&quot; checked&gt;
-               &lt;img class=&quot;chapter__form__radio__image&quot; 
-               src=&lt;%= require('./../images/car.svg') %&gt;
-            &lt;/label&gt;
-    
-            &lt;label&gt;
-               &lt;input class=&quot;chapter__form__radio&quot; type=&quot;radio&quot; 
-               name=&quot;transport-icon&quot; value=&quot;big&quot;&gt;
-               &lt;img class=&quot;chapter__form__radio__image&quot; 
-               src=&lt;%= require('./../images/train.svg') %&gt;
-            &lt;/label&gt;
-            &lt;/form&gt;
+      &lt;label &gt;
+         &lt;input class=&quot;chapter__form__radio&quot; type=&quot;radio&quot;
+            name=&quot;transport-icon&quot; value=&quot;small&quot; checked&gt;
+         &lt;img class=&quot;chapter__form__radio__image&quot; 
+         src=&lt;%= require('./../images/car.svg') %&gt;
+      &lt;/label&gt;
+
+      &lt;label&gt;
+         &lt;input class=&quot;chapter__form__radio&quot; type=&quot;radio&quot; 
+         name=&quot;transport-icon&quot; value=&quot;big&quot;&gt;
+         &lt;img class=&quot;chapter__form__radio__image&quot; 
+         src=&lt;%= require('./../images/train.svg') %&gt;
+      &lt;/label&gt;
+      &lt;/form&gt;
          </code>
       </pre>
 
    <h2 class="chapter__main-heading">CSS</h2>
-      <pre rel="HTML">
+      <pre rel="HTML" class="code-snippet">
          <code>
-            .chapter__form {
+   .chapter__form {
 
-               width: 80%;
-               margin-left: 10%;
-           
-               .chapter__form__text {
-                   font-family: $font-mmp;
-                   font-size: 1.44rem;
-                   color: black;
-                   font-weight: bold;
-                   border: 2px solid $lightgreen;
-                   width: 100%;
-                   height: 40px;
-                   padding-left: 2%;
-                   margin-bottom: 10px;
-                   box-shadow: 2px 1px 1px $darkgreen;
-                   border-radius: 10px;
-               }
-           
-               .chapter__form__text:focus {
-                   color: white;
-                   font-weight: bold;
-                   background-color: $lightgreen;
-               }
-           
-               .chapter__form__radio { 
-                   position: absolute;
-                   opacity: 0;
-                   width: 0;
-                   height: 0;
-                   
-                   &__image {
-                       width: 50px;
-                       height: 50px;
-                       border-radius: 50%;
-                       border-color: black;
-                       border-width: 2.5px;
-                       border-style: solid;
-                       margin-right: 5px;
-                   }
-           
-                   &__image:hover {
-                       background-color: $lightgreen;
-                   }
-               }
-                 
-               .chapter__form__radio + .chapter__form__radio__image {
-                   cursor: pointer;
-               }
-           
-               .chapter__form__radio:checked + .chapter__form__radio__image {
-                   background-color: $lightgreen;
-               }
-           }
+      width: 80%;
+      margin-left: 10%;
+   
+      .chapter__form__text {
+            font-family: $font-mmp;
+            font-size: 1.44rem;
+            color: black;
+            font-weight: bold;
+            border: 2px solid $lightgreen;
+            width: 100%;
+            height: 40px;
+            padding-left: 2%;
+            margin-bottom: 10px;
+            box-shadow: 2px 1px 1px $darkgreen;
+            border-radius: 10px;
+      }
+   
+      .chapter__form__text:focus {
+            color: white;
+            font-weight: bold;
+            background-color: $lightgreen;
+      }
+   
+      .chapter__form__radio { 
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+            
+            &__image {
+               width: 50px;
+               height: 50px;
+               border-radius: 50%;
+               border-color: black;
+               border-width: 2.5px;
+               border-style: solid;
+               margin-right: 5px;
+            }
+   
+            &__image:hover {
+               background-color: $lightgreen;
+            }
+      }
+         
+      .chapter__form__radio + .chapter__form__radio__image {
+            cursor: pointer;
+      }
+   
+      .chapter__form__radio:checked + .chapter__form__radio__image {
+            background-color: $lightgreen;
+      }
+   }
          </code>
       </pre>
    <hr>
@@ -226,43 +230,43 @@
       
       <h2 class="chapter__main-heading">HTML</h2>
 
-      <pre rel="HTML">
+      <pre rel="HTML" class="code-snippet">
          <code>
-      &lt;a class=&quot;link&quot; href=&quot;#&quot;&gt;Standardlink&lt;/a&gt;
-      &lt;a class=&quot;link link--disabled&quot; href=&quot;#&quot;&gt;Disabledlink&lt;/a&gt;
+   &lt;a class=&quot;link&quot; href=&quot;#&quot;&gt;Standardlink&lt;/a&gt;
+   &lt;a class=&quot;link link--disabled&quot; href=&quot;#&quot;&gt;Disabledlink&lt;/a&gt;
          </code>
       </pre>
 
 
       <h2 class="chapter__main-heading">SCSS</h2>
 
-      <pre rel="HTML">
+      <pre rel="HTML" class="code-snippet">
          <code>
-            .link {
-               font-family: $font-mmp;
-               font-size: 1.2rem;
-               font-weight: bold;
-               text-decoration: none;
-               color: black;
-               padding: 1rem;
-               margin:1rem;
-               
-               &:hover {
-                  background: $lightgreen;
-                  color: white;
-                  border-radius: 6px;
-               }
-               
-               &--disabled {
-                  color: grey;
-               
-                  &:hover{
-                     background: none;
-                     color: grey;
-                     cursor: default;
-                  }
-               }
+      .link {
+         font-family: $font-mmp;
+         font-size: 1.2rem;
+         font-weight: bold;
+         text-decoration: none;
+         color: black;
+         padding: 1rem;
+         margin:1rem;
+         
+         &:hover {
+            background: $lightgreen;
+            color: white;
+            border-radius: 6px;
+         }
+         
+         &--disabled {
+            color: grey;
+         
+            &:hover{
+               background: none;
+               color: grey;
+               cursor: default;
             }
+         }
+      }
          </code>
       </pre>
 
@@ -288,46 +292,46 @@
 
     <h2 class="chapter__main-heading">HTML</h2>
 
-    <pre rel="HTML">
+    <pre rel="HTML" class="code-snippet">
       <code>
-         &lt;button class=&quot;button&quot;&gt;Standardbutton&lt;/button&gt;
-         &lt;button class=&quot;button button--small&quot;&gt;Kleiner Button&lt;/button&gt;
+   &lt;button class=&quot;button&quot;&gt;Standardbutton&lt;/button&gt;
+   &lt;button class=&quot;button button--small&quot;&gt;Kleiner Button&lt;/button&gt;
       </code>
     </pre>
 
 
     <h2 class="chapter__main-heading">SCSS</h2>
 
-    <pre rel="HTML">
+    <pre rel="HTML" class="code-snippet">
       <code>
-         .button {
-            width: 80%;
-            margin-left: 10%;
-            background: $darkgreen;
-            border: none;
-            border-radius: 10px;
-            font-family: $font-mmp;
-            font-weight: bold;
-            font-size: $button;
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            text-decoration: none;
-            color: white;
-            cursor: pointer;
-          
-            &:hover {
-              transform: scale(1.1);
-              transition-duration: 0.2s;
-            }
-          
-            &--small {
-              width: 40%;
-              margin: 0 5%;
-              font-size: $button-small;
-            }
+      .button {
+         width: 80%;
+         margin-left: 10%;
+         background: $darkgreen;
+         border: none;
+         border-radius: 10px;
+         font-family: $font-mmp;
+         font-weight: bold;
+         font-size: $button;
+         padding-top: 1rem;
+         padding-bottom: 1rem;
+         padding-left: 1rem;
+         padding-right: 1rem;
+         text-decoration: none;
+         color: white;
+         cursor: pointer;
+         
+         &:hover {
+            transform: scale(1.1);
+            transition-duration: 0.2s;
          }
+         
+         &--small {
+            width: 40%;
+            margin: 0 5%;
+            font-size: $button-small;
+         }
+      }
       </code>
    </pre>
    <hr>
@@ -357,23 +361,23 @@
 
      <h2 class="chapter__main-heading">HTML</h2>
 
-     <pre rel="HTML">
+     <pre rel="HTML" class="code-snippet">
         <code>
-      &lt;div class=&quot;navigation&quot;&gt;
-         &lt;ul class=&quot;navigation__list&quot;&gt;
-            &lt;li class=&quot;navigation__item navigation__item--active&quot;&gt;Route&lt;/li&gt;
-            &lt;li class=&quot;navigation__item&quot;&gt;Statistik&lt;/li&gt;
-            &lt;li class=&quot;navigation__item&quot;&gt;Freunde&lt;/li&gt;
-            &lt;li class=&quot;navigation__item&quot;&gt;Profil&lt;/li&gt;
-         &lt;/ul&gt;
-      &lt;/div&gt;
+&lt;div class=&quot;navigation&quot;&gt;
+   &lt;ul class=&quot;navigation__list&quot;&gt;
+      &lt;li class=&quot;navigation__item navigation__item--active&quot;&gt;Route&lt;/li&gt;
+      &lt;li class=&quot;navigation__item&quot;&gt;Statistik&lt;/li&gt;
+      &lt;li class=&quot;navigation__item&quot;&gt;Freunde&lt;/li&gt;
+      &lt;li class=&quot;navigation__item&quot;&gt;Profil&lt;/li&gt;
+   &lt;/ul&gt;
+&lt;/div&gt;
         </code>
      </pre>
 
 
      <h2 class="chapter__main-heading">SCSS</h2>
 
-     <pre rel="HTML">
+     <pre rel="HTML" class="code-snippet">
        <code>
          .navigation {
             display:flex;
@@ -420,7 +424,7 @@
       <h2 class="chapter__main-heading">Feedback</h2>
 
       <p class="chapter__text">
-         Feedback Elemente sind Pop-ups welche Hinweise, oder auch Entscheidungen beinhalten können. Sie enthalten ein Textelement, 
+         Feedback-Elemente sind Pop-ups, welche Hinweise oder auch Entscheidungen beinhalten können. Sie enthalten ein Textelement, 
          sowie einen Standardbutton oder zwei kleine Buttons.
       </p>
       <div class="mobile-size">
@@ -441,7 +445,7 @@
       </div>
 
       <h2 class="chapter__main-heading">HTML</h2>
-   <pre rel="HTML">
+   <pre rel="HTML" class="code-snippet">
       <code>
          &lt;div class=&quot;mobile-size&quot;&gt;
             &lt;div class=&quot;feedback&quot;&gt;
@@ -465,7 +469,7 @@
       </pre>
 
       <h2 class="chapter__main-heading">CSS</h2>
-   <pre rel="HTML">
+   <pre rel="HTML" class="code-snippet">
       <code>
          .feedback {
             width: 80%;

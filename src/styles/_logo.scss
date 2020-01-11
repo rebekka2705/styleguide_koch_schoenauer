@@ -10,6 +10,14 @@
 
     pre {
         margin-top: 0;
-        margin-left: 15%;
+        margin-left: 10%;
+        padding-right: 6%;
+        width: 45%;
+    }
+
+    &__code {
+        margin-top: 5%;
+        padding-left: 2%;
+        padding-right: 20%;
     }
 }
