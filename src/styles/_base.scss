@@ -26,14 +26,8 @@ body{
   margin: 0;
 }
 
-.menu__item__link{
-  text-decoration: none;
-  color:black;
-}
-
 hr {
-    color: $darkgreen;
-    margin: 5% 0;
+    color: $color-style;
 }
 
 .main-header{
@@ -46,45 +40,6 @@ hr {
   height: 20vh;
   margin-bottom: 5rem;
  
-}
-
-.menu{
-  grid-area: menu;
-  justify-self: end;
-  align-self:start;
-  padding: 0;
- 
-  margin-bottom: 5rem;
-  
-  &--sticky {
-     position: sticky;
-     top:0;
-  }
-  
-  &__list{
-    list-style:none;
-  }
-
-  &__item{
-    font-size: 1.2rem;
-    padding: 0.3rem;
-
-    &:hover {
-      font-weight: bolder;
-    }
-  }
-
-  &__heading{
-      font-size: 1.4rem;
-      font-weight: bold;
-      margin-top: 1rem;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
-
 }
 
 .content{
@@ -121,6 +76,7 @@ pre {
   height: 20vh;
   padding-top: 5rem;
   margin-top: 2rem;
+  background-color: $color-style;
 }
 
 
