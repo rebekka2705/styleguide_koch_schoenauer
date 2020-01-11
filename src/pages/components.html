@@ -2,10 +2,227 @@
 
 <section class="content">
 
+   <div class="chapter" id="lists">
+      <h2 class="chapter__main-heading">Listen Elemente</h2>
+
+      <p class="chapter__text">Die Rangliste unter den Freunden wird als Liste angezeigt. Jedes Listenelement enthält ein
+         Bild des Freundes, sowie dessen Benutzername, seinen CO<sub>2</sub> Verbrauch seit Benützung der App und seine 
+         gesammelten Green Points.
+      </p>
+   
+      <ul class="chapter__friend">
+         <li class="chapter__friend__item">
+            <img class="chapter__friend__item__picture" src=<%= require('./../images/icon1.jpeg') %> alt="Logo">
+            <div class="chapter__friend__item__text">
+               <p>Chrisik1</p>
+               <p><span class="chapter__friend__item__text--key">CO<sub>2</sub>:</span> 60kg</p>
+               <p><span class="chapter__friend__item__text--key">Green Points:</span> 150</p>
+            </div>
+         </li>
+      </ul>
+
+      <h2 class="chapter__main-heading">HTML</h2>
+
+<pre rel="HTML"><code>
+&lt;ul class=&quot;chapter__friend&quot;&gt;
+   &lt;li class=&quot;chapter__friend__item&quot;&gt;
+      &lt;img class=&quot;chapter__friend__item__picture&quot; 
+      src=&lt;%= require('./../images/icon1.jpeg') %&gt; alt=&quot;Logo&quot;&gt;
+      &lt;div class=&quot;chapter__friend__item__text&quot;&gt;
+         &lt;p&gt;Chrisik1&lt;/p&gt;
+         &lt;p&gt;&lt;span class=&quot;chapter__friend__item__text--key&quot;&gt;
+         CO&lt;sub&gt;2&lt;/sub&gt;:&lt;/span&gt; 60kg&lt;/p&gt;
+         &lt;p&gt;&lt;span class=&quot;chapter__friend__item__text--key&quot;&gt;
+         Green Points:&lt;/span&gt; 150&lt;/p&gt;
+      &lt;/div&gt;
+   &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<h2 class="chapter__main-heading">CSS</h2>
+
+<pre rel="HTML"><code>.chapter__friend {
+   width: 300px;
+   height: 80px;
+   list-style-type: none;
+   padding-left: 0;
+   margin: 0;
+   background-color: $lightgreen;
+   
+   &__item {
+         width: 100%;
+         height: 100%;
+         display: flex;
+         flex-direction: row;
+         justify-content: space-around;
+         align-items: center;
+
+         &__picture {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+         }
+
+         &__text {
+            p {
+               margin: 0;
+            }
+            &--key {
+               font-weight: bold;
+            }
+         }
+   }
+}</code></pre>
+   </div>
+
+   <div class="chapter" id="form">
+
+   <h2 class="chapter__main-heading">Form Elements</h2>
+
+   <form>
+      <input class="chapter__form__text" type="text" name="start" placeholder="Start"><br>
+      <input class="chapter__form__text" type="text" name="end" placeholder="Ziel"><br>
+
+   <label>
+      <input class="chapter__form" type="radio" name="car" checked>
+      <img class="chapter__form__image" src=<%= require('./../images/car.svg') %> alt="Car Icon">
+    </label>
+    
+    <label>
+      <input class="chapter__form" type="radio" name="train">
+      <img class="chapter__form__image" src=<%= require('./../images/train.svg') %> alt="Train Icon">
+    </label>
+    </form> 
+
+   </div>
+
    <!--Fake Link: grün unterstrichen-->
+   <div class="chapter" id="links">
+      <h2 class="chapter__main-heading">Links</h2>
+      <div class="chapter__text">
+         Für unser Projekt ist ein Standardlink und ein Disabledlink ausreichend.
+      </div>   
+
+      <div class="chapter__links">
+         <div class="chapter__links__item"><a class="link" href="#">Standardlink</a></div>
+         <div class="chapter__links__item"><a class="link link--disabled" href="#">Disabledlink</a></div>
+      </div>
+      
+      <h2 class="chapter__main-heading">HTML</h2>
+
+      <pre rel="HTML">
+         <code>
+            &lt;a class=&quot;link&quot; href=&quot;#&quot;&gt;Standardlink&lt;/a&gt;
+            &lt;a class=&quot;link link--disabled&quot; href=&quot;#&quot;&gt;Disabledlink&lt;/a&gt;
+         </code>
+      </pre>
+
+
+      <h2 class="chapter__main-heading">SCSS</h2>
+
+      <pre rel="HTML">
+         <code>
+            .link {
+               font-family: $font-mmp;
+               font-size: 1.2rem;
+               font-weight: bold;
+               text-decoration: none;
+               color: black;
+               padding: 1rem;
+               margin:1rem;
+               
+               &:hover {
+                  background: $lightgreen;
+                  color: white;
+                  border-radius: 6px;
+               }
+               
+               &--disabled {
+                  color: grey;
+               
+                  &:hover{
+                     background: none;
+                     color: grey;
+                     cursor: default;
+                  }
+               }
+            }
+         </code>
+      </pre>
+
+
+   </div>
     <!--Button: beim Hoovern Text wird größer, medium und big Button-->
+
+    <div class="chapter" id="buttons">
+      <h2 class="chapter__main-heading">Buttons</h2>
+      <p class="chapter__text">Unser Primary-Button verwendet unsere Secondary Textcolor white</p>
+
+      <div class="chapter__buttons">
+         <button class="button">Standardbutton</button>
+         <button class="button button--small">Kleiner Button</button>
+      </div>
+    </div>
+
+    <h2 class="chapter__main-heading">HTML</h2>
+
+    <pre rel="HTML">
+       <code>
+         &lt;button class=&quot;button&quot;&gt;Standardbutton&lt;/button&gt;
+         &lt;button class=&quot;button button--small&quot;&gt;Kleiner Button&lt;/button&gt;
+       </code>
+    </pre>
+
+
+    <h2 class="chapter__main-heading">SCSS</h2>
+
+    <pre rel="HTML">
+      <code>
+         .button {
+            background: $darkgreen;
+            border: none;
+            border-radius: 10px;
+            font-family: $font-mmp;
+            font-weight: bold;
+            font-size: $button;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            margin: auto;
+            text-decoration: none;
+            color: white;
+          
+            &:hover {
+              transform: scale(1.1);
+              transition-duration: 0.2s;
+            }
+          
+            &--small {
+              font-size: $button-small;
+            }
+          }
+ 
+      </code>
+   </pre>
+
+
     <!--Form Elements: Input Felder, Radio Buttons-->
      <!--Navigation: beim Hoovern grün hinterlegt-->
+
+     <div class="chapter" id="navigation">
+
+      <h2 class="chapter__main-heading">Navigation</h2>
+      <p class="chapter__text">Hier wird unsere Navigation veranschaulicht.</p>
+         <div class="chapter__navigation">
+            <ul class="navigation">
+               <li class="navigation__items navigation__items--active">Route</li>
+               <li class="navigation__items navigation__items--non-active">Statistik</li>
+               <li class="navigation__items navigation__items--non-active">Freunde</li>
+               <li class="navigation__items navigation__items--non-active">Profil</li>
+            </ul>
+         </div>
+     </div>
      <!--Feedback Pop-up-->
   
 </section>

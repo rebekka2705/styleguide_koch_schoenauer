@@ -1,5 +1,6 @@
 .chapter__navigation {
   border-bottom: 5px solid $lightgreen;
+  width: 50%;
 }
 .navigation {
   font-family: $font-mmp;
@@ -26,11 +27,11 @@
     }
   }  
   
-  &--non-active{
-     &:hover {
+  &--non-active {
+    &:hover {
       color: white;
       background: $lightgreen-hover;
     }
   }
- 
+
 }

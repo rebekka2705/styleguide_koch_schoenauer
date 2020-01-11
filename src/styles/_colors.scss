@@ -1,0 +1,39 @@
+.chapter { 
+    &__colors {
+        width: 100%;
+        height: 100%;
+        padding: 2% 0;
+        margin-bottom: 3%;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        
+        p {
+            margin: 0;
+        }
+    }
+
+    &__colors--darkgreen {
+        background-color: $darkgreen;
+    }
+
+    &__colors--lightgreen {
+        background-color: $lightgreen;
+    }
+
+    &__colors--white {
+        color: black;
+        background-color: $white;
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+    }
+
+    &__colors__text {
+        color: black;
+
+        &--error {
+            color: red;
+        }
+    }
+}

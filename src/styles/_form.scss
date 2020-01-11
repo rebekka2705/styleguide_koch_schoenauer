@@ -1,0 +1,36 @@
+.chapter__form { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    
+
+    &__image {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border-color: black;
+        border-width: 1px;
+        border-style: solid;
+        margin-right: 5px;
+    }
+
+    &__image:hover {
+        background-color: $lightgreen;
+    }
+}
+
+.chapter__form__text {
+    color: black;
+    font-weight: bold;
+    border: 2px solid $lightgreen;
+    width: 300px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.chapter__form__text:focus {
+    color: white;
+    font-weight: bold;
+    background-color: $lightgreen;
+}
