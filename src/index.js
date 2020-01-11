@@ -1,15 +1,17 @@
-import "./styles/style.scss"
+import "./styles/style.scss";
 
 
-var links = document.querySelector(".navigation__items");
-links = Array.from(links);
+  var nav_links = document.querySelectorAll(".navigation__item");
+  nav_links = Array.from(nav_links);
 
-links.forEach( link => link.addClickListener("click", toggleNavClass(link)));
-
-function toggleNavClass(link) {
-  console.log("hello");
-  if(link.className == "navigation__items--non-active"){
-    link.classList.remove("navigation__items--non-active");
-    link.classList.add("navigation__items--active");
+  function toggleNavClass(e) {
+    if(!e.target.className.includes("navigation__item--active")){
+      let active = document.querySelector(".navigation__item--active");
+      active.classList.remove("navigation__item--active");
+      e.target.classList.add("navigation__item--active")
+    }
   }
-}
+
+  nav_links.forEach( link => link.addEventListener("click", toggleNavClass));
+
+

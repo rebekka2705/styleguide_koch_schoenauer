@@ -216,15 +216,77 @@
 
       <h2 class="chapter__main-heading">Navigation</h2>
       <p class="chapter__text">Hier wird unsere Navigation veranschaulicht.</p>
+
          <div class="chapter__navigation">
             <ul class="navigation">
-               <li class="navigation__items navigation__items--active">Route</li>
-               <li class="navigation__items navigation__items--non-active">Statistik</li>
-               <li class="navigation__items navigation__items--non-active">Freunde</li>
-               <li class="navigation__items navigation__items--non-active">Profil</li>
+               <li class="navigation__item navigation__item--active">Route</li>
+               <li class="navigation__item">Statistik</li>
+               <li class="navigation__item">Freunde</li>
+               <li class="navigation__item">Profil</li>
             </ul>
          </div>
+
      </div>
+
+     <h2 class="chapter__main-heading">HTML</h2>
+
+     <pre rel="HTML">
+        <code>
+      &lt;div class=&quot;navigation&quot;&gt;
+         &lt;ul class=&quot;navigation__list&quot;&gt;
+            &lt;li class=&quot;navigation__item navigation__item--active&quot;&gt;Route&lt;/li&gt;
+            &lt;li class=&quot;navigation__item&quot;&gt;Statistik&lt;/li&gt;
+            &lt;li class=&quot;navigation__item&quot;&gt;Freunde&lt;/li&gt;
+            &lt;li class=&quot;navigation__item&quot;&gt;Profil&lt;/li&gt;
+         &lt;/ul&gt;
+      &lt;/div&gt;
+
+        </code>
+     </pre>
+
+
+     <h2 class="chapter__main-heading">SCSS</h2>
+
+     <pre rel="HTML">
+       <code>
+         .navigation {
+            display:flex;
+            justify-content: center;
+            border-bottom: 5px solid $lightgreen;
+         }
+
+         .navigation__list {
+            font-family: $font-mmp;
+            font-size: $h3;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0px;
+            padding: 1.1rem;
+            padding-bottom: 0;
+         }
+          
+         .navigation__item {
+            padding: 0.5rem;
+            font-weight: bold;
+            letter-spacing: 1.2px;
+         
+            &:hover {
+            color: white;
+            background: $lightgreen-hover;
+            }
+            
+            &--active {
+              color: white;
+              background: $lightgreen;
+          
+              &:hover {
+                background: $lightgreen;
+              }
+            }  
+          }
+       </code>
+    </pre>
      <!--Feedback Pop-up-->
   
 </section>

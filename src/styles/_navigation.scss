@@ -1,7 +1,9 @@
 .chapter__navigation {
+  display:flex;
+  justify-content: center;
   border-bottom: 5px solid $lightgreen;
-  width: 50%;
 }
+
 .navigation {
   font-family: $font-mmp;
   font-size: $h3;
@@ -13,11 +15,16 @@
   padding-bottom: 0;
 }
 
-.navigation__items {
+.navigation__item {
   padding: 0.5rem;
   font-weight: bold;
   letter-spacing: 1.2px;
 
+  &:hover {
+    color: white;
+    background: $lightgreen-hover;
+  }
+  
   &--active {
     color: white;
     background: $lightgreen;
@@ -26,12 +33,4 @@
       background: $lightgreen;
     }
   }  
-  
-  &--non-active {
-    &:hover {
-      color: white;
-      background: $lightgreen-hover;
-    }
-  }
-
 }
