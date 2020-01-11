@@ -1,8 +1,10 @@
 .chapter__links {
+  display: flex;
+  justify-content: center;
   margin: 2rem;
 
   &__item {
-    margin: 2rem;
+    margin: 1rem;
   }
 }
 
@@ -16,7 +18,7 @@
   margin: 1rem;
 
   &:hover {
-    background: $lightgreen;
+    background-color: $lightgreen;
     color: white;
     border-radius: 6px;
   }
