@@ -5,6 +5,7 @@ html {
   font-size: $root-size;
   font-family: $font-styleguide;
   scroll-behavior: smooth;
+  overflow-x: hidden;
  
 }
 *, *:before, *:after {
@@ -92,13 +93,10 @@ hr {
     padding-right: 3rem;
   }
 
-
   .mobile-size {
     text-align: center;
     flex-basis: 50%;
   }
-
-
 }
 
 
@@ -113,19 +111,13 @@ hr {
  
 
   .content {
-    padding-left: 2%;
-    padding-right: 2%;
+    margin-left: 10%;
   }
 
   .menu {
-    transform: translateX(-100%);
-    transition-duration: 2s;
-  }
-
- 
-
-  .menu {
-    display: none;
+    &--sticky {
+      position: static !important;
+   }
   }
 
   .code-snippet, pre {
