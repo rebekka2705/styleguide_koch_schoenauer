@@ -4,6 +4,8 @@
 }
 
 .button {
+  width: 80%;
+  margin-left: 10%;
   background: $darkgreen;
   border: none;
   border-radius: 10px;
@@ -14,9 +16,9 @@
   padding-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  margin: auto;
   text-decoration: none;
   color: white;
+  cursor: pointer;
 
   &:hover {
     transform: scale(1.1);
@@ -24,6 +26,8 @@
   }
 
   &--small {
+    width: 40%;
+    margin: 0 5%;
     font-size: $button-small;
   }
 }
