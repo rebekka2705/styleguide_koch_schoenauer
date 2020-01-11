@@ -1,6 +1,7 @@
 .chapter__buttons{
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .button {
@@ -17,6 +18,8 @@
   margin: auto;
   text-decoration: none;
   color: white;
+  flex: 0 1 auto;
+  
 
   &:hover {
     transform: scale(1.1);

@@ -1,0 +1,20 @@
+.chapter {
+
+  margin-bottom: 5rem;
+  
+
+  &__main-heading {
+    font-size: $h2;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+
+  }
+
+  &__text {
+    font-size: $paragraph;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+
+}
+

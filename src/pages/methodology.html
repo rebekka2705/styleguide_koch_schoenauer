@@ -17,23 +17,23 @@
     <!--BEM: Code Snippet Bsp-->
     <div class="chapter" id="conventions">
         <h2 class="chapter__main-heading">Naming Conventions</h2>
-        <p class="chapter__text">Wir verwenden den BEM-Synthax. Das Block-Component ist in diesem Beispiel "menu". 
-            Das Element, welches von diesem Block abhängig ist, ist die Liste also "menu__list", die einzelnen Menü-Unterpunkte
-            bekommen die Klasse "menu__item", ebenso gibt es weiteres Element "menu__item__link". Der
-            Link besitzt noch den Modifier "menu__item__link--big" bzw. "menu__item__link--small". Diese Methode erleichtert
-            eine konsistente Struktur im CSS zu erhalten und es ist leichter Strukturen wiederzuverwenden.
+        <p class="chapter__text">Wir verwenden den BEM-Synthax. Das Block-Component ist in diesem Beispiel "navigation". 
+            Das Element, welches von diesem Block abhängig ist, ist die Liste also "navigation__list", die einzelnen Menü-Unterpunkte
+            bekommen die Klasse "navigation__item". Der
+            Link besitzt noch den Modifier "navigation__item--active". Diese Methode erleichtert
+            eine konsistente Struktur im CSS und SCSS zu schreiben. Ebenso erleichtert es die Reusability von CSS-Code.
         </p>
         
         <pre rel="HTML"class="code-snippet">
             <code>
-&lt;nav class=&quot;menu&quot;&gt;
-    &lt;ul class=&quot;menu__list&quot;&gt;
-        &lt;li class=&quot;menu__heading&quot;&gt;&lt;a class=&quot;menu__item__link--big&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
-        &lt;li class=&quot;menu__item&quot;&gt;&lt;a class=&quot;menu__item__link--small&quot;&gt;Subpage1&lt;/a&gt;&lt;/li&gt;
-        &lt;li class=&quot;menu__item&quot;&gt;&lt;a class=&quot;menu__item__link--small&quot;&gt;Subpage2&lt;/a&gt;&lt;/li&gt;
-        &lt;li class=&quot;menu__item&quot;&gt;&lt;a class=&quot;menu__item__link--small&quot;&gt;Subpage3&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/nav&gt;
+            &lt;div class=&quot;navigation&quot;&gt;
+                &lt;ul class=&quot;navigation__list&quot;&gt;
+                   &lt;li class=&quot;navigation__item navigation__item--active&quot;&gt;Route&lt;/li&gt;
+                   &lt;li class=&quot;navigation__item&quot;&gt;Statistik&lt;/li&gt;
+                   &lt;li class=&quot;navigation__item&quot;&gt;Freunde&lt;/li&gt;
+                   &lt;li class=&quot;navigation__item&quot;&gt;Profil&lt;/li&gt;
+                &lt;/ul&gt;
+             &lt;/div&gt;
             </code>
         </pre>
        
