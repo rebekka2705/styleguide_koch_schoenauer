@@ -1,6 +1,8 @@
 .chapter__friend {
     width: 300px;
     height: 80px;
+    font-family: $font-mmp;
+    font-size: 1.2rem;
     list-style-type: none;
     padding-left: 0;
     margin: 0;
@@ -13,6 +15,7 @@
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
+        box-shadow: 2px 1px 1px $darkgreen;
 
         &__picture {
             width: 75px;
@@ -23,9 +26,6 @@
         &__text {
             p {
                 margin: 0;
-            }
-            &--key {
-                font-weight: bold;
             }
         }
     }
