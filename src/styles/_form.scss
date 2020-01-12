@@ -37,10 +37,13 @@
             border-width: 2.5px;
             border-style: solid;
             margin-right: 5px;
+            padding: 2%;
         }
 
         &__image:hover {
             background-color: $lightgreen;
+            fill: white;
+            border: none;
         }
     }
       
@@ -50,5 +53,7 @@
 
     .chapter__form__radio:checked + .chapter__form__radio__image {
         background-color: $lightgreen;
+        fill: white;
+        border: none;
     }
 }

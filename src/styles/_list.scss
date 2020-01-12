@@ -2,7 +2,7 @@
     width: 80%;
     height: 10%;
     margin-left: 10%;
-    padding: 2%;
+    padding: 4%;
     font-family: $font-mmp;
     font-size: 1.2rem;
     list-style-type: none;
@@ -10,6 +10,8 @@
     background-color: $lightgreen;
     box-shadow: 2px 1px 1px $darkgreen;
     border-radius: 10px;
+    color: white;
+    text-align: left;
     
     &__item {
         width: 100%;

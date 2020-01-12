@@ -67,6 +67,7 @@ hr {
   border-left-style: solid;
   border-right-style: solid;
   margin-bottom: 5rem;
+  overflow-x: auto;
 }
 
 .mobile-size {
@@ -85,8 +86,6 @@ hr {
   width: 100%;
   text-align:center;
   font-weight: bold;
-  height: 20vh;
-  padding-top: 5rem;
   margin-top: 2rem;
   background-color: $color-style;
 }
@@ -131,4 +130,8 @@ hr {
   }
 
 
+}
+
+.svg__car {
+  fill: pink;
 }

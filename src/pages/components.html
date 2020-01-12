@@ -67,7 +67,7 @@
          width: 80%;
          height: 10%;
          margin-left: 10%;
-         padding: 2%;
+         padding: 4%;
          font-family: $font-mmp;
          font-size: 1.2rem;
          list-style-type: none;
@@ -75,6 +75,8 @@
          background-color: $lightgreen;
          box-shadow: 2px 1px 1px $darkgreen;
          border-radius: 10px;
+         color: white;
+         text-align: left;
    
          &__item {
             width: 100%;
@@ -122,16 +124,18 @@
 
     <label >
       <input class="chapter__form__radio" type="radio" name="transport-icon" value="small" checked>
-      <img class="chapter__form__radio__image" src=<%= require('./../images/car.svg') %>
+      <%= require('html-loader!../partials/_car.html') %>
     </label>
     
     <label>
       <input class="chapter__form__radio" type="radio" name="transport-icon" value="big">
-      <img class="chapter__form__radio__image" src=<%= require('./../images/train.svg') %>
+      <%= require('html-loader!../partials/_train.html') %>
     </label>
     </form> 
    </div>
 </div>
+
+
 
    <h2 class="chapter__main-heading">HTML</h2>
       <pre rel="HTML" class="code-snippet">
@@ -143,17 +147,13 @@
             name=&quot;end&quot; placeholder=&quot;Ziel&quot;&gt;&lt;br&gt;
 
       &lt;label &gt;
-         &lt;input class=&quot;chapter__form__radio&quot; type=&quot;radio&quot;
-            name=&quot;transport-icon&quot; value=&quot;small&quot; checked&gt;
-         &lt;img class=&quot;chapter__form__radio__image&quot; 
-         src=&lt;%= require('./../images/car.svg') %&gt;
+         &lt;input class=&quot;chapter__form__radio&quot; type=&quot;radio&quot; name=&quot;transport-icon&quot; value=&quot;small&quot; checked&gt;
+         &lt;%= require('html-loader!../partials/_car.html') %&gt;
       &lt;/label&gt;
 
       &lt;label&gt;
-         &lt;input class=&quot;chapter__form__radio&quot; type=&quot;radio&quot; 
-         name=&quot;transport-icon&quot; value=&quot;big&quot;&gt;
-         &lt;img class=&quot;chapter__form__radio__image&quot; 
-         src=&lt;%= require('./../images/train.svg') %&gt;
+         &lt;input class=&quot;chapter__form__radio&quot; type=&quot;radio&quot; name=&quot;transport-icon&quot; value=&quot;big&quot;&gt;
+         &lt;%= require('html-loader!../partials/_train.html') %&gt;
       &lt;/label&gt;
       &lt;/form&gt;
          </code>
@@ -201,10 +201,13 @@
                border-width: 2.5px;
                border-style: solid;
                margin-right: 5px;
+               padding: 2%;
             }
    
             &__image:hover {
-               background-color: $lightgreen;
+                  background-color: $lightgreen;
+                  fill: white;
+                  border: none;
             }
       }
          
@@ -496,6 +499,7 @@
                   margin-left: 10%;
                   width: 80%;
                   text-align: center;
+                  color: white;
             }
          
             &__button {
